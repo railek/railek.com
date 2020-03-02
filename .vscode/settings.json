@@ -1,0 +1,20 @@
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "explorer.compactFolders": false,
+    "eslint.alwaysShowStatus": true,
+    "[javascript]": {
+        "editor.formatOnSave": false
+    },
+    "[javascriptreact]": {
+        "editor.formatOnSave": false
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "prettier.disableLanguages": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "editor.formatOnSave": true,
+}
