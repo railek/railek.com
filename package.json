@@ -30,6 +30,8 @@
         "babel-plugin-styled-components": "^1.10.7",
         "dotenv": "^8.2.0",
         "eslint-loader": "^4.0.2",
+        "fontsource-bungee": "^4.0.0",
+        "fontsource-open-sans": "^4.0.0",
         "gatsby": "^2.20.13",
         "gatsby-image": "^2.3.1",
         "gatsby-plugin-manifest": "^2.3.3",
