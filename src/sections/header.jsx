@@ -1,19 +1,19 @@
 import React, { useState, useRef } from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
 import Logo from '../components/logo';
 import Social from '../components/social';
 import Menu from '../components/menu';
 import Burger from '../components/burger';
 
-const StyledHeader = Styled.header`
+const StyledHeader = styled.header`
     position: sticky;
     top: 0;
     z-index: 10;
     width: 100%;
     height: 64px;
     background-color: var(--gray-900);
-    border-bottom: 1px solid var(--gray-700);
+    border-bottom: 1px solid var(--gray-800);
 
     @media (min-width: 768px) {
         left: 0;

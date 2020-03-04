@@ -1,8 +1,8 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import { IoLogoTwitter, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io';
 
-const StyledSocial = Styled.div`
+const StyledSocial = styled.div`
     display: none;
     order: 3;
 

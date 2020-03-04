@@ -1,8 +1,8 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import { bool, func } from 'prop-types';
 
-const StyledBurger = Styled.button`
+const StyledBurger = styled.button`
     padding: var(--space-4);
     display: flex;
     justify-content: center;

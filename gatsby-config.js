@@ -34,6 +34,10 @@ module.exports = {
         'gatsby-plugin-no-sourcemaps',
         'gatsby-plugin-eslint',
         'gatsby-plugin-styled-components',
+        {
+            resolve: 'gatsby-plugin-stylelint',
+            options: { files: ['**/*.{js,jsx}'] },
+        },
         'gatsby-plugin-postcss',
         {
             resolve: 'gatsby-source-filesystem',

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 
-const StyledLogo = Styled.div`
+const StyledLogo = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;

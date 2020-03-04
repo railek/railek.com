@@ -3,6 +3,7 @@
     "editor.tabSize": 4,
     "explorer.compactFolders": false,
     "eslint.alwaysShowStatus": true,
+    "editor.formatOnSave": true,
     "[javascript]": {
         "editor.formatOnSave": false
     },
@@ -16,5 +17,7 @@
         "javascript",
         "javascriptreact"
     ],
-    "editor.formatOnSave": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false
 }

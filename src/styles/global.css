@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-
 @import 'color.css';
 @import 'space.css';
 
@@ -144,5 +141,3 @@ video {
     max-width: 100%;
     height: auto;
 }
-
-@tailwind utilities;

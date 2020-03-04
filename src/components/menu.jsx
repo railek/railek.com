@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledMenu = Styled.div`
+const StyledMenu = styled.div`
     align-items: center;
     background-color: var(--gray-900);
     bottom:0;
@@ -18,7 +18,7 @@ const StyledMenu = Styled.div`
     width: ${(props) => (!props.open ? '0%' : '100%')};
 
     @media (min-width: 768px) {
-        border-right: 1px solid var(--gray-700);
+        border-right: 1px solid var(--gray-800);
         height: 100%;
         justify-content: flex-start;
         left: var(--space-96);

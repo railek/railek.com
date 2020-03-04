@@ -5,6 +5,8 @@
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "graphql.vscode-graphql",
-        "wix.vscode-import-cost"
+        "wix.vscode-import-cost",
+        "stylelint.vscode-stylelint",
+        "jpoissonnier.vscode-styled-components"
     ]
 }
