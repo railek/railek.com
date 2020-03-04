@@ -6,7 +6,7 @@ import imageUrlFor from '../lib/image';
 
 const query = graphql`
     query SEOQuery {
-        site: sanityMetadata(_id: { regex: "/(drafts.|)metadata/" }) {
+        metadata: sanityMetadata(_id: { regex: "/(drafts.|)metadata/" }) {
             title
             description
             keywords
@@ -21,23 +21,23 @@ const query = graphql`
 `;
 
 export default function SEO({ title, description, type, lang, image }) {
-    const { site } = useStaticQuery(query);
+    const { metadata } = useStaticQuery(query);
 
     return (
         <Helmet
             title={title}
             htmlAttributes={{ lang }}
-            titleTemplate={`${site.title} | %s`}
+            titleTemplate={`${metadata.title} | %s`}
             defer={false}
         >
-            <meta name="description" content={site.description} />
-            <meta name="keywords" content={site.keywords} />
+            <meta name="description" content={metadata.description} />
+            <meta name="keywords" content={metadata.keywords} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta charSet="utf-8" />
             <meta property="og:title" content={title} key="ogtitle" />
             <meta
                 property="og:description"
-                content={description || site.description}
+                content={description || metadata.description}
                 key="ogdesc"
             />
             <meta property="og:type" content={type || 'website'} key="ogtype" />
@@ -45,18 +45,19 @@ export default function SEO({ title, description, type, lang, image }) {
                 property="og:image"
                 content={
                     imageUrlFor(image).width(1200).url() ||
-                    imageUrlFor(site.image).width(1200).url()
+                    imageUrlFor(metadata.image).width(1200).url()
                 }
                 key="ogimage"
             />
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:title" content={title} />
-            <meta name="twitter:description" content={description || site.description} />
-            <meta name="twitter:creator" content={site.twitter} />
+            <meta name="twitter:description" content={description || metadata.description} />
+            <meta name="twitter:creator" content={metadata.twitter} />
             <meta
                 name="twitter:image"
                 content={
-                    imageUrlFor(image).width(300).url() || imageUrlFor(site.image).width(300).url()
+                    imageUrlFor(image).width(300).url() ||
+                    imageUrlFor(metadata.image).width(300).url()
                 }
             />
         </Helmet>

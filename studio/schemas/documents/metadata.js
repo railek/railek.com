@@ -33,6 +33,12 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
+            title: 'Logo',
+            name: 'logo',
+            type: 'image',
+            validation: (Rule) => Rule.required(),
+        },
+        {
             title: 'Image',
             name: 'image',
             type: 'image',

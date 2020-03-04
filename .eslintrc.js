@@ -11,6 +11,10 @@ module.exports = {
     globals: {
         graphql: true,
     },
+    env: {
+        browser: true,
+        node: true,
+    },
     plugins: ['react', 'prettier'],
     rules: {
         'prettier/prettier': ['error', prettierOptions],
