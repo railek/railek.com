@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import Nav from '../sections/nav';
 import Header from '../sections/header';
 import Footer from '../sections/footer';
 
@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
         <Container>
             <Header />
             <div style={{ width: '100%' }}>
+                <Nav />
                 <main>{children}</main>
                 <Footer />
             </div>
