@@ -13,7 +13,7 @@ const StyledBurger = styled.button`
         width: var(--space-24);
         height: var(--space-2);
         background-color: var(--gray-400);
-        transition: width 0.7s ease-in-out;
+        transition: width 0.4s ease-in-out;
 
         :nth-child(2) {
             width: ${(props) => (props.open ? '100%' : '40%')};

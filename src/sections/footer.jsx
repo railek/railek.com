@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
     border-top: 1px solid var(--gray-800);
     width: 100%;
 
-   & > div {
+    & > div {
         display: grid;
         justify-content: space-between;
         grid-auto-flow: row;
@@ -36,8 +36,7 @@ const StyledFooter = styled.footer`
             grid-column: span 3 / span 3;
         }
 
-        &:last-child
-        {
+        &:last-child {
             grid-row: span 1 / span 1;
         }
     }
@@ -78,7 +77,7 @@ const StyledBottom = styled.div`
 `;
 
 const Footer = () => {
-    const links = ['Home', 'About', 'Projects', 'Articles', 'Contact'];
+    const links = ['Home', 'About', 'Projects', 'Blog', 'Contact'];
 
     return (
         <>

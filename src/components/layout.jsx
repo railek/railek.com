@@ -5,7 +5,6 @@ import styled from 'styled-components';
 import Header from '../sections/header';
 import Footer from '../sections/footer';
 
-import 'modern-css-reset';
 import 'fontsource-bungee';
 import 'fontsource-open-sans';
 
@@ -24,7 +23,7 @@ const Layout = ({ children }) => {
     return (
         <Container>
             <Header />
-            <div>
+            <div style={{ width: '100%' }}>
                 <main>{children}</main>
                 <Footer />
             </div>

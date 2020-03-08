@@ -6,15 +6,15 @@ import PropTypes from 'prop-types';
 const StyledMenu = styled.div`
     align-items: center;
     background-color: var(--gray-900);
-    bottom:0;
+    bottom: 0;
     display: flex;
     justify-content: flex-end;
-    left:0;
+    left: 0;
     position: fixed;
-    right:0;
+    right: 0;
     text-align: right;
     top: 64px;
-    transition: width 0.7s ease-in-out;
+    transition: width 0.4s ease-in-out;
     width: ${(props) => (!props.open ? '0%' : '100%')};
 
     @media (min-width: 768px) {
@@ -25,7 +25,7 @@ const StyledMenu = styled.div`
         min-height: 100vh;
         overflow: hidden;
         text-align: left;
-        top:0;
+        top: 0;
     }
 
     @media (min-width: 1024px) {
@@ -75,34 +75,17 @@ const StyledMenu = styled.div`
     }
 `;
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
     const isHidden = !!open;
-    const tabIndex = isHidden ? 0 : -1;
-    const links = [
-        {
-            title: 'Home',
-        },
-        {
-            title: 'About',
-        },
-        {
-            title: 'Projects',
-        },
-        {
-            title: 'Articles',
-        },
-        {
-            title: 'Contact',
-        },
-    ];
+    const links = ['Home', 'About', 'Projects', 'Blog', 'Contact'];
 
     return (
         <StyledMenu open={open} aria-hidden={!isHidden}>
             <ul>
                 {links.map((link) => (
-                    <li key={link.title}>
-                        <Link tabIndex={tabIndex} to="/">
-                            <h1>{link.title}</h1>
+                    <li key={link}>
+                        <Link onClick={() => setOpen(!open)} to={`/${link.toLowerCase()}`}>
+                            <h1>{link}</h1>
                         </Link>
                     </li>
                 ))}
@@ -113,6 +96,7 @@ const Menu = ({ open }) => {
 
 Menu.propTypes = {
     open: PropTypes.bool.isRequired,
+    setOpen: PropTypes.object.isRequired,
 };
 
 export default Menu;

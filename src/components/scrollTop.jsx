@@ -14,7 +14,7 @@ const StyledButton = styled.button`
     &:hover {
         border: 1px solid var(--gray-100);
         transform: scale(1.1);
-        transition: all .2s ease-in-out;
+        transition: all 0.2s ease-in-out;
     }
 
     svg {

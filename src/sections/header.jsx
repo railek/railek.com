@@ -10,7 +10,6 @@ const StyledHeader = styled.header`
     position: sticky;
     top: 0;
     z-index: 10;
-    width: 100%;
     height: 64px;
     background-color: var(--gray-900);
     border-bottom: 1px solid var(--gray-800);

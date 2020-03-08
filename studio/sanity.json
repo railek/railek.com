@@ -1,32 +1,35 @@
 {
-    "root": true,
-    "project": {
-        "name": "railek"
+  "root": true,
+  "project": {
+    "name": "railek"
+  },
+  "api": {
+    "projectId": "11gojol7",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/code-input"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
     },
-    "api": {
-        "projectId": "11gojol7",
-        "dataset": "production"
-    },
-    "plugins": [
-        "@sanity/base",
-        "@sanity/components",
-        "@sanity/default-layout",
-        "@sanity/default-login",
-        "@sanity/desk-tool"
-    ],
-    "env": {
-        "development": {
-            "plugins": ["@sanity/vision"]
-        }
-    },
-    "parts": [
-        {
-            "name": "part:@sanity/base/schema",
-            "path": "./schemas/schema"
-        },
-        {
-            "name": "part:@sanity/desk-tool/structure",
-            "path": "./deskStructure.js"
-        }
-    ]
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    }
+  ]
 }
