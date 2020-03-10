@@ -12,7 +12,7 @@ const StyledHeader = styled.h2`
 
     @media (min-width: 768px) {
         font-size: var(--space-32);
-        max-width: 32ch;
+        max-width: 26ch;
     }
 
     &::after {
