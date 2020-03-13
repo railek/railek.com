@@ -35,11 +35,6 @@ module.exports = {
         'gatsby-plugin-eslint',
         'gatsby-plugin-styled-components',
         {
-            resolve: 'gatsby-plugin-stylelint',
-            options: { files: ['**/*.{js,jsx}'] },
-        },
-        'gatsby-plugin-postcss',
-        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',

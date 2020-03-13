@@ -1,4 +1,8 @@
 {
+    "git.autofetch": true,
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
     "explorer.compactFolders": false,
@@ -11,13 +15,12 @@
         "editor.formatOnSave": false
     },
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
     },
-    "prettier.disableLanguages": [
-        "javascript",
-        "javascriptreact"
-    ],
-    "css.validate": false,
-    "less.validate": false,
-    "scss.validate": false
+
+    "files.encoding": "utf8",
+    "npm.exclude": [
+        "**/studio",
+        "**/web"
+    ]
 }

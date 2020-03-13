@@ -1,4 +1,5 @@
 [build]
+base = "web/"
 Command = "gatsby build"
 publish = "public"
 

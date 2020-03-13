@@ -1,12 +1,10 @@
 {
     "recommendations": [
         "dbaeumer.vscode-eslint",
-        "dsznajder.es7-react-js-snippets",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
         "graphql.vscode-graphql",
         "wix.vscode-import-cost",
-        "stylelint.vscode-stylelint",
         "jpoissonnier.vscode-styled-components"
     ]
 }

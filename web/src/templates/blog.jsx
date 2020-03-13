@@ -30,7 +30,7 @@ const StyledHeader = styled.div`
 `;
 
 export const query = graphql`
-    query($slug: String!) {
+    query ($slug: String!) {
         blog: sanityBlog(slug: { current: { eq: $slug } }) {
             id
             title
