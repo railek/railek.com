@@ -2,6 +2,25 @@
 @import 'color.css';
 @import 'space.css';
 
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-700);
+    border-radius: var(--space-4);
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--gray-900);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gray-700);
+    border-radius: var(--space-4);
+}
+
 html,
 body {
     background-color: var(--gray-900);
