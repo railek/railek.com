@@ -14,10 +14,11 @@ const StyledNav = styled.nav`
         align-items: center;
         justify-content: space-between;
         padding: var(--space-96);
+        border-bottom: 1px solid var(--gray-800);
     }
 
     @media (min-width: 1280px) {
-        padding: var(--space-96) var(--space-128) var(--space-32) var(--space-128);
+        padding: var(--space-96) var(--space-128) var(--space-96) var(--space-128);
     }
 
     .name {

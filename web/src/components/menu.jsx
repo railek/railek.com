@@ -18,7 +18,6 @@ const StyledMenu = styled.div`
     width: ${(props) => (!props.open ? '0%' : '100%')};
 
     @media (min-width: 768px) {
-        border-right: 1px solid var(--gray-800);
         height: 100%;
         justify-content: flex-start;
         left: var(--space-96);
@@ -48,6 +47,7 @@ const StyledMenu = styled.div`
         }
 
         @media (min-width: 1024px) {
+            padding: var(--space-64);
             gap: var(--space-64);
         }
     }

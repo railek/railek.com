@@ -19,6 +19,7 @@ const StyledHeader = styled.header`
         min-width: var(--space-96);
         height: 100vh;
         border-bottom: none;
+        border-right: 1px solid var(--gray-800);
     }
 
     @media (min-width: 1024px) {
