@@ -59,6 +59,23 @@ const StyledFooter = styled.footer`
     }
 `;
 
+const StyledWrapper = styled.div`
+    max-width: 1280px;
+    padding: var(--space-24);
+
+    @media (min-width: 768px) {
+        padding: var(--space-48);
+    }
+
+    @media (min-width: 1024px) {
+        padding: var(--space-48) var(--space-96);
+    }
+
+    @media (min-width: 1280px) {
+        padding: var(--space-48) var(--space-128);
+    }
+`;
+
 const StyledBottom = styled.div`
     border-top: 1px solid var(--gray-800);
     width: 100%;
@@ -123,7 +140,7 @@ const Footer = () => {
                                 <a href="mailto:jean@railek.com">jean@railek.com</a>
                             </li>
                             <li>
-                                <a href="tel:+27818490162">+27 (081) 849 01</a>
+                                <a href="tel:+27818490162">+27 (081) 849 0162</a>
                             </li>
                         </ul>
                     </div>
@@ -167,10 +184,10 @@ const Footer = () => {
             </StyledFooter>
 
             <StyledBottom>
-                <Wrapper>
+                <StyledWrapper>
                     <p>© Copyright {new Date().getFullYear()} Railek. All rights reserved.</p>
                     <ScrollTop />
-                </Wrapper>
+                </StyledWrapper>
             </StyledBottom>
         </>
     );

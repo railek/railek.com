@@ -19,6 +19,7 @@ module.exports = {
     rules: {
         'prettier/prettier': ['error', prettierOptions],
         'no-underscore-dangle': 'off',
+        'react/no-array-index-key': 'off',
         'react/forbid-prop-types': 'off',
         'jsx-a11y/anchor-is-valid': [
             'error',
