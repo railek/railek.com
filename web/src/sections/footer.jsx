@@ -94,7 +94,7 @@ const StyledBottom = styled.div`
 `;
 
 const Footer = () => {
-    const links = ['Home', 'About', 'Projects', 'Blog', 'Contact'];
+    const links = ['About', 'Projects', 'Contact'];
 
     return (
         <>
@@ -103,6 +103,9 @@ const Footer = () => {
                     <div className="col">
                         <h3>Navigation</h3>
                         <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
                             {links.map((link) => (
                                 <li key={link}>
                                     <Link to={`/${link.toLowerCase()}`}>{link}</Link>

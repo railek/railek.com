@@ -26,29 +26,21 @@ const StyledHeader = styled.header`
         min-width: var(--space-128);
     }
 
-    @media (min-width: 1280px) {
-        min-width: var(--space-192);
-    }
-
     & > div {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
-        padding: var(--space-12) var(--space-24) var(--space-12) var(--space-24);
+        padding: var(--space-12) var(--space-24);
 
         @media (min-width: 768px) {
             flex-direction: column;
             padding: var(--space-32);
         }
 
-        @media (min-width: 1024) {
-            padding: var(--space-48) var(--space-40) var(--space-48) var(--space-40);
-        }
-
-        @media (min-width: 1280px) {
-            padding: var(--space-96) var(--space-64) var(--space-96) var(--space-64);
+        @media (min-width: 1024px) {
+            padding: var(--space-48);
         }
     }
 `;

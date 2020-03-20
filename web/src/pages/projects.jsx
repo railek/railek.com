@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import PortableText from '@sanity/block-content-to-react';
-import { IoLogoGithub, IoMdOpen } from 'react-icons/io';
+import { IoLogoGithub, IoMdOpen, IoIosAlert } from 'react-icons/io';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -94,6 +94,26 @@ const StyledGrid = styled.div`
     }
 `;
 
+const StyledWarning = styled.div`
+    display: flex;
+    align-items: center;
+    background-color: var(--red-300);
+    padding: var(--space-8) var(--space-16);
+    border: 1px solid var(--red-700);
+
+    svg {
+        font-size: var(--space-48);
+        color: var(--red-700);
+    }
+
+    p {
+        color: var(--red-700);
+        font-size: var(--space-14);
+        margin-left: var(--space-16);
+        font-weight: 700;
+    }
+`;
+
 const query = graphql`
     query ProjectQuery {
         project: allSanityProject {
@@ -101,6 +121,7 @@ const query = graphql`
                 node {
                     _id
                     title
+                    hidden
                     _rawDescription
                     url
                     tech
@@ -110,7 +131,7 @@ const query = graphql`
     }
 `;
 
-function ProjectCard({ title, url, tech, description }) {
+function ProjectCard({ title, hidden, url, tech, description }) {
     return (
         <a href={url} target="_blank" rel="nofollow noopener noreferrer">
             <StyledCard>
@@ -122,6 +143,14 @@ function ProjectCard({ title, url, tech, description }) {
                     <h3>{title}</h3>
                     <PortableText blocks={description} serializers={serializers} />
                 </header>
+
+                {hidden && (
+                    <StyledWarning>
+                        <IoIosAlert />
+                        <p>private repository, please contact me directly for a demo.</p>
+                    </StyledWarning>
+                )}
+
                 <footer>
                     <ul>
                         {tech.map((item) => (
@@ -136,6 +165,7 @@ function ProjectCard({ title, url, tech, description }) {
 
 ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
+    hidden: PropTypes.bool.isRequired,
     url: PropTypes.string.isRequired,
     tech: PropTypes.array.isRequired,
     description: PropTypes.array.isRequired,
@@ -156,6 +186,7 @@ const ProjectPage = () => {
                         <ProjectCard
                             key={item._id}
                             title={item.title}
+                            hidden={item.hidden}
                             url={item.url}
                             tech={item.tech}
                             description={item._rawDescription}

@@ -13,6 +13,11 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
+            title: 'Hidden',
+            name: 'hidden',
+            type: 'boolean',
+        },
+        {
             title: 'Description',
             name: 'description',
             type: 'portableText',

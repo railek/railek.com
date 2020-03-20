@@ -6,6 +6,7 @@ import SectionTitle from '../components/section-title';
 
 const StyledWrapper = styled.div`
     padding: var(--space-24);
+    max-width: 1024px;
 
     @media (min-width: 768px) {
         padding: var(--space-48);

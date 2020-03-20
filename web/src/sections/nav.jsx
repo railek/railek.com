@@ -43,7 +43,7 @@ const StyledNav = styled.nav`
 `;
 
 const Nav = () => {
-    const links = ['About', 'Projects', 'Blog', 'Contact'];
+    const links = ['About', 'Projects', 'Contact'];
 
     return (
         <StyledNav>

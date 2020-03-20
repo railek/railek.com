@@ -1,7 +1,15 @@
 import S from '@sanity/desk-tool/structure-builder';
 import { MdSettings, MdExtension, MdFilterVintage, MdLock } from 'react-icons/md';
 
-const hiddenTypes = ['metadata', 'introduction', 'backend', 'frontend'];
+const hiddenTypes = [
+    'metadata',
+    'introduction',
+    'backend',
+    'frontend',
+    'tools',
+    'hero',
+    'services',
+];
 
 export default () =>
     S.list()
@@ -44,6 +52,25 @@ export default () =>
                                         .id('frontend')
                                         .schemaType('frontend')
                                         .documentId('frontend'),
+                                ),
+                            S.listItem()
+                                .title('Tools')
+                                .icon(MdLock)
+                                .child(
+                                    S.editor().id('tools').schemaType('tools').documentId('tools'),
+                                ),
+                            S.listItem()
+                                .title('Hero')
+                                .icon(MdLock)
+                                .child(S.editor().id('hero').schemaType('hero').documentId('hero')),
+                            S.listItem()
+                                .title('Services')
+                                .icon(MdLock)
+                                .child(
+                                    S.editor()
+                                        .id('services')
+                                        .schemaType('services')
+                                        .documentId('services'),
                                 ),
                         ]),
                 ),

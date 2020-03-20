@@ -31,10 +31,6 @@ const StyledMenu = styled.div`
         left: var(--space-128);
     }
 
-    @media (min-width: 1280px) {
-        left: var(--space-192);
-    }
-
     ul {
         display: flex;
         flex-direction: column;
@@ -47,8 +43,7 @@ const StyledMenu = styled.div`
         }
 
         @media (min-width: 1024px) {
-            padding: var(--space-64);
-            gap: var(--space-64);
+            padding: var(--space-128);
         }
     }
 
@@ -77,11 +72,14 @@ const StyledMenu = styled.div`
 
 const Menu = ({ open, setOpen }) => {
     const isHidden = !!open;
-    const links = ['Home', 'About', 'Projects', 'Blog', 'Contact'];
+    const links = ['About', 'Projects', 'Contact'];
 
     return (
         <StyledMenu open={open} aria-hidden={!isHidden}>
             <ul>
+                <Link onClick={() => setOpen(!open)} to="/">
+                    <h1>Home</h1>
+                </Link>
                 {links.map((link) => (
                     <li key={link}>
                         <Link onClick={() => setOpen(!open)} to={`/${link.toLowerCase()}`}>
