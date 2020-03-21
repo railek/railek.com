@@ -1,0 +1,7 @@
+[build]
+base = "web/"
+Command = "gatsby build"
+publish = "public"
+
+[[plugins]]
+package = "netlify-plugin-gatsby-cache"

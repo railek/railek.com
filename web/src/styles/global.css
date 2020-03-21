@@ -1,0 +1,50 @@
+@import 'reset.css';
+@import 'color.css';
+@import 'space.css';
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-700);
+    border-radius: var(--space-4);
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--gray-900);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--gray-700);
+    border-radius: var(--space-4);
+}
+
+html,
+body {
+    background-color: var(--gray-900);
+}
+
+body {
+    font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji';
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--gray-50);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: 'Bungee';
+}

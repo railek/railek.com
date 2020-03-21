@@ -1,0 +1,37 @@
+{
+    "name": "railek.com",
+    "private": true,
+    "description": "Personal portfolio website made using Gatsby & Sanity.",
+    "author": "railek <jean@railek.com>",
+    "version": "1.0.0",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/railek/railek.com/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/railek/railek.com.git"
+    },
+    "homepage": "https://github.com/railek/railek.com/#README",
+    "workspaces": [
+        "web",
+        "studio"
+    ],
+    "husky": {
+        "hooks": {
+            "commit-msg": "sudo commitlint -E HUSKY_GIT_PARAMS"
+        }
+    },
+    "scripts": {
+        "install-packages": "yarn install --silent",
+        "dev": "yarn workspace web dev",
+        "build": "yarn workspace web build",
+        "clean": "yarn workspace web clean",
+        "deploy-sanity": "yarn workspace studio deploy"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^12.0.0",
+        "@commitlint/config-conventional": "^12.0.0",
+        "husky": "^6.0.0"
+    }
+}
