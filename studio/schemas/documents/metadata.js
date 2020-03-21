@@ -10,6 +10,11 @@ export default {
             validation: (Rule) => Rule.required().max(60).warning('Should be under 60 characters'),
         },
         {
+            name: 'resume',
+            title: 'Resume',
+            type: 'file',
+        },
+        {
             name: 'description',
             title: 'Description',
             type: 'text',

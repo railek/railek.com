@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import PortableText from '@sanity/block-content-to-react';
 import { SiUpwork } from 'react-icons/si';
 import styled from 'styled-components';
@@ -36,7 +36,7 @@ const StyledButtons = styled.div`
     flex-wrap: wrap;
     margin-top: var(--space-48);
 
-    .contact {
+    .resume {
         border-radius: var(--space-4);
         border: 2px solid var(--gray-100);
         background: transparent;
@@ -85,11 +85,18 @@ const query = graphql`
                 }
             }
         }
+        metadata: sanityMetadata {
+            resume {
+                asset {
+                    url
+                }
+            }
+        }
     }
 `;
 
 export default function Introduction() {
-    const { introduction } = useStaticQuery(query);
+    const { introduction, metadata } = useStaticQuery(query);
 
     return (
         <BackgroundImage
@@ -114,9 +121,14 @@ export default function Introduction() {
                 </StyledContent>
 
                 <StyledButtons>
-                    <Link to="/contact" className="contact">
-                        Get In Touch
-                    </Link>
+                    <a
+                        href={metadata.resume.asset.url}
+                        rel="noopener nofollow noreferrer"
+                        target="_blank"
+                        className="resume"
+                    >
+                        Download Resume
+                    </a>
                     <a
                         href="https://www.upwork.com/freelancers/~010179bc29f8199995"
                         rel="noopener nofollow noreferrer"
